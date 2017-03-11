@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1 问好</title>
+</head>
+<body>
+  <label>What is your name?</label>
+  <input type="text" name="name" id="input">
+  <input type="submit" id="submit-btn">
+  <span id="display"></span>
+
+  <script>
+    
+    var input = document.getElementById('input');
+    var submitBtn = document.getElementById('submit-btn');
+    var display = document.getElementById('display');
+
+    submitBtn.addEventListener('click', function() {
+      var output = 'Hello, ' + input.value + ', nice to meet you!'
+      display.innerHTML = output;
+    }, false);
+
+  </script>
+</body>
+</html>
