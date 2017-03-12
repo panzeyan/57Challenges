@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 打印引语</title>
+</head>
+
+<body>
+    <label for="quote">What is the quote?</label>
+    <input type="text" name="quote" id="quote-input">
+    <br>
+    <label for="author">Who said it?</label>
+    <input type="text" name="author" id="author-input">
+    <br>
+    <input type="submit" id="submit-btn">
+    <br>
+    <span id="display"></span>
+
+    <script>
+        var quote = document.getElementById('quote-input');
+        var author = document.getElementById('author-input');
+        var submitBtn = document.getElementById('submit-btn');
+        var display = document.getElementById('display');
+
+        submitBtn.addEventListener('click', function() {
+            var output = '';
+            output = author.value + ' says, \"' + quote.value + '\"';
+            display.innerHTML = output;
+        }, false);
+    </script>
+</body>
+
+</html>
