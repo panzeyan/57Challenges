@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4 疯狂填词</title>
+</head>
+
+<body>
+    <label for="noun">Enter a noun:</label>
+    <input type="text" name="noun">
+    <br>
+    <label for="verb">Enter a verb:</label>
+    <input type="text" name="verb">
+    <br>
+    <label for="adj">Enter a adjective:</label>
+    <input type="text" name="adj">
+    <br>
+    <label for="adv">Enter a adverb:</label>
+    <input type="text" name="adv">
+    <br>
+    <input type="submit" id="submit-btn">
+    <br>
+    <span id="display"></span>
+
+    <script>
+        var noun = document.getElementsByName('noun')[0],
+            verb = document.getElementsByName('verb')[0],
+            adj = document.getElementsByName('adj')[0],
+            adv = document.getElementsByName('adv')[0],
+            submitBtn = document.getElementById('submit-btn'),
+            display = document.getElementById('display');
+
+        submitBtn.addEventListener('click', function() {
+            var output = '';
+            output = 'Do you ' + verb.value + ' your ' + adj.value + ' ' + noun.value + ' ' + adv.value +'? ';
+            output += 'That\'s hilarious!';
+            display.innerHTML = output;
+        }, false);
+    </script>
+</body>
+
+</html>
