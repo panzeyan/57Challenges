@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2 计算字符数</title>
+</head>
+
+<body>
+    <label>What is the input string?</label>
+    <input type="text" id="input">
+    <input type="submit" id="submit-btn">
+    <br>
+    <span id="display"></span>
+
+    <script>
+        var input = document.getElementById('input');
+        var submitBtn = document.getElementById('submit-btn');
+        var display = document.getElementById('display');
+
+
+        /*// 1st version
+        submitBtn.addEventListener('click', function() {
+
+          var rawStr = input.value; // 获取原始输入字符串；
+          var output = '';
+
+          if (rawStr.length < 1) {
+            // 输入为空时的提示信息
+            display.innerHTML = 'Please input a string.';
+          } else {
+            output = rawStr + ' has ' + rawStr.length + ' characters.';
+            display.innerHTML = output;
+          }
+        }, false);*/
+
+
+        // 挑战
+        input.addEventListener('keyup', function(e) {
+            var rawStr = e.target.value;
+            var output = '';
+
+            if (rawStr.length < 1) {
+                // 输入为空时的提示信息
+                display.innerHTML = 'Please input a string.';
+            } else {
+                output = rawStr + ' has ' + rawStr.length + ' characters.';
+                display.innerHTML = output;
+            }
+        }, false);
+    </script>
+
+</body>
+
+</html>
